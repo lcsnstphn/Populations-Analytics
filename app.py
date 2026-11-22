@@ -17,7 +17,7 @@ uploaded_file = st.sidebar.file_uploader("Upload CSV or Excel file", type=["csv"
 if uploaded_file is None:
     # Default to actual system file if user has not uploaded a new one
     try:
-        default_path = '/content/population.csv.xlsx.csv'
+        default_path = 'population.csv.xlsx.csv'
         df_raw = pd.read_csv(default_path)
         st.sidebar.success("Loaded default database successfully!")
     except Exception:
